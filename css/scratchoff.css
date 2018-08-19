@@ -24,20 +24,20 @@ body {
   width:100%;
 }
 @media only screen and (max-width : 480px) {
-  .scratchpad {width:375px !important;height:396px;}
-  .scratch-container {width:480px !important;}
+  .scratchpad {width:90% !important;height:396px;}
+  .scratch-container {width:100% !important;}
 }
-
+/*
 @media only screen and (max-width : 375px) {
   .scratchpad {width:350px !important;height:396px;}
   .scratch-container {width:375px !important;}
 }
- 
-/* Custom, iPhone Retina */ 
+
 @media only screen and (max-width : 320px) {
   .scratchpad {width:290px;height:287px;}
   .scratch-container {width:290px !important;}
 }
+*/
 .promo-container {
 	background:#FFF;
 	border-radius:5px;
