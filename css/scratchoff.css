@@ -6,9 +6,9 @@ html {
 }
 .scratchpad{
   min-width: 450px;
-  min-height: 750px;
-  max-width: 750px;
-  max-height: 750px;
+  min-height: 650px;
+  max-width: 500px;
+  max-height: 650px;
   border: solid 10px #FFFFFF;
   margin:0 auto;
 }
@@ -25,7 +25,7 @@ body {
   width:100%;
 }
 @media only screen and (max-width : 480px) {
-  .scratchpad {width:400px;height:396px;}
+  .scratchpad {width:350px;height:396px;}
   .scratch-container {width:400px !important;}
 }
  

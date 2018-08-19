@@ -42,6 +42,7 @@
     <section class="portfolio more-pad" id="portfolio">
       <div class="container">
         <h3 class="text-center text-uppercase text-secondary mb-0">A surprise for you!!</h3>
+		<h5 class="text-center text-uppercase text-secondary mb-0">Scratch card below to reveal the surprise!</h5>
         <hr class="star-dark mb-5">
         <div class="row">
 			<div class="scratch-container">
@@ -75,7 +76,8 @@
 	<script type="text/javascript">
 	 
 	var promoCode = '';
-	var selectBG = "img/" + getUrlParam('img','birthdaycake.png');
+	var overlayImage = "img/" + getUrlParam('img','birthdaycake.png');
+	var selectBG = "img/" + getUrlParam('img2','bdayoffer.jpg');
 /*	
 	var bg1 = 'https://jennamolby.com/scratch-and-win/images/400.png';
 	var bg2 = 'https://jennamolby.com/scratch-and-win/images/500.png';
@@ -98,7 +100,7 @@
 		// give real-time updates
 		realtime    : true, 
 		// The overlay image
-		fg: 'https://jennamolby.com/scratch-and-win/images/overlay.png',
+		fg: overlayImage,
 		// The cursor (coin) image
 		'cursor': 'url("https://jennamolby.com/scratch-and-win/images/coin1.png") 5 5, default',
 		
