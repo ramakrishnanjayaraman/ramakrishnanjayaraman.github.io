@@ -110,8 +110,10 @@
 		'cursor': 'url("img/coin1.png"), 5 5, default',
 		
 		scratchMove: function (e, percent) {
-			var audio = new Audio('sounds/scratch.mp3');
-			audio.play();
+			if ((percent < 90)
+				var audio = new Audio('sounds/scratch.mp3');
+				audio.play();
+			}
 			// Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
 			if ((percent > 50) && (promoCode != '')) {
 			  $('.promo-container').show();
