@@ -59,6 +59,9 @@
 		<div id="page-body">
 			<section class="" id="page-heading">
 				<h3 class="text-center text-uppercase text-secondary mb-0">Your lease is about to expire!!</h3>
+				<div class="text-center" id="play-video-again" style="display: none">
+					<a class="standard-a" href="" id="play-video-again">Play Video Again</a>
+				</div>
 			</section>
 			<section class="" id="video-section">
 				 <div class='embed-container' id="video-container">
@@ -69,12 +72,9 @@
 		    <section class="" id="selection-section" style="display: none">
 				<div class="container">
 					<h5 class="text-center text-secondary mb-0">Select the option below that best fits your needs</h5>
-					<div class="text-center">
-						<a class="standard-a" href="" id="play-video-again">Play Video Again</a>
-					</div>
 					<hr class="star-dark mb-5"/>
 					<div class="row">
-						<div class="col-md-6 col-lg-4">
+						<div class="col-md-4 col-lg-4">
 							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
 							  <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
 								<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -85,7 +85,7 @@
 							  <div class="img-fluid-text"><h5>Turn In Vehicle</h5></div>
 							</a>
 						</div>
-						<div class="col-md-6 col-lg-4">
+						<div class="col-md-4 col-lg-4">
 							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
 							  <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
 								<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -96,7 +96,7 @@
 							  <div class="img-fluid-text"><h5>Exchange For New Vehicle</h5></div>
 							</a>
 						</div>
-						<div class="col-md-6 col-lg-4">
+						<div class="col-md-4 col-lg-4">
 							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
 							  <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
 								<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -280,7 +280,7 @@
 				console.log('Finished.');
 				
 				$("#video-section").fadeOut(2000, function() {
-					$("#selection-section").slideToggle();
+					showSelectionSection();
 				});
 				
 				player.unload();
@@ -289,11 +289,21 @@
 
 			$('#play-video-again').click(function(){ 
 				$("#video-section").show();
-				$("#selection-section").hide();
+				hideSelectionSection();
 				player.play();
 				return false; 
 			});
 		});
+		
+		function showSelectionSection() {
+			$("#selection-section").slideToggle();
+			$("#play-video-again").show();
+		}
+		
+		function hideSelectionSection() {
+			$("#selection-section").hide();
+			$("#play-video-again").hide();
+		}
 		
 		function exitFullScreen() {
 		  if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement ) {
