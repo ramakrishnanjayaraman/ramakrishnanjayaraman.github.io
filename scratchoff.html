@@ -94,6 +94,7 @@
 		var promoCode = '';
 	  }
 */	  
+
 	$('#Scratchoff-Main').text(decodeURI(txt1));
 	$('#Scratchoff-Sub').text(decodeURI(txt2));
 	$('#promo').wScratchPad({
@@ -106,9 +107,11 @@
 		// The overlay image
 		fg: overlayImage,
 		// The cursor (coin) image
-		'cursor': 'url("img/coin1.png") 5 5, default',
+		'cursor': 'url("img/coin1.png"), 5 5, default',
 		
 		scratchMove: function (e, percent) {
+			var audio = new Audio('sounds/scratch.mp3');
+			audio.play();
 			// Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
 			if ((percent > 50) && (promoCode != '')) {
 			  $('.promo-container').show();
