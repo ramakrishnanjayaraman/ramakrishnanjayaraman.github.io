@@ -42,6 +42,14 @@ and (orientation : portrait) {
 		height: 80px!important;
 		width: 145px!important;
 	}
+	.adjust-pad-left {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.row {
+		margin-right: 0px;
+		margin-left: -5px;
+	}
 }
 
 .img-fluid-text {
