@@ -151,6 +151,4 @@ body {
 	flex-wrap: wrap;
 }
 
-.row:before, row:after {
-	display: inline-block
-}
+.row:before, .row:after {display: none !important;}
