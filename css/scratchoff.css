@@ -8,7 +8,7 @@ html {
   min-height: 500px;
   max-width: 500px;
   max-height: 650px;
-  border: solid 10px #efefef;
+  /*border: solid 10px #efefef;*/
   margin:10px auto;
 }
 body {
@@ -65,4 +65,9 @@ body {
   border-radius:3px;
   -moz-border-radius:3px;
   -webkit-border-radiuss:3px;
+}
+
+.star-dark-override {
+	margin-top: 1.8rem!important;
+	margin-bottom: 1.8rem!important;
 }
