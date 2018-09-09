@@ -1,19 +1,19 @@
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
+/** *, *:before, *:after {
   box-sizing: inherit;
 }
+*/
 .scratchpad{
   min-height: 500px;
   max-width: 500px;
   max-height: 650px;
   /*border: solid 10px #efefef;*/
   margin:10px auto;
+  
+  border-color: lightgrey;
+  border-style: dashed;
+  border-width: thin;
 }
-body {
-    background:#efefef;
-}
+
 .scratch-container {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -23,7 +23,8 @@ body {
   user-select: none;
   //position: fixed;
   width:100%;
-  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  
 }
 @media only screen and (max-width : 480px) {
   .scratchpad {min-height: 350px; width:90% !important;height:350px!important;}
