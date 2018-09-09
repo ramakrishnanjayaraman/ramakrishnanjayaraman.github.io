@@ -21,7 +21,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: fixed;
+  //position: fixed;
   width:80%;
 }
 @media only screen and (max-width : 480px) {
