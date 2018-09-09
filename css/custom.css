@@ -46,7 +46,7 @@ and (orientation : portrait) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	.row {
+	.row-adjustment {
 		margin-right: 0px;
 		margin-left: -5px;
 	}
@@ -72,6 +72,11 @@ and (orientation : portrait) {
 	padding-top: 40px;
 }
 
+.row-adjustment {
+	margin-right: 0px;
+	margin-left: -15px;
+}
+	
 .company-logo {
 	padding-right: 20px;
 	height: 100px;
