@@ -8,7 +8,7 @@ html {
   min-height: 500px;
   max-width: 500px;
   max-height: 650px;
-  /*border: solid 10px #FFFFFF;*/
+  border: solid 10px #efefef;
   margin:10px auto;
 }
 body {
