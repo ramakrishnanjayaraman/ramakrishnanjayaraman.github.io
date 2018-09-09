@@ -150,3 +150,7 @@ body {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+
+.row:before, row:after {
+	display: inline-block
+}
