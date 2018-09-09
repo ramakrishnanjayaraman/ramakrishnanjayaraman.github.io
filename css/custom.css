@@ -37,6 +37,11 @@ and (orientation : portrait) {
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	.company-logo {
+		padding-right: 5px!important;
+		height: 80px!important;
+		width: 145px!important;
+	}
 }
 
 .img-fluid-text {
@@ -59,8 +64,8 @@ and (orientation : portrait) {
 }
 
 .no-bottom-pad {
-	padding-top: 10px !important;
-	padding-bottom: 0px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 }
 
 .more-pad {
@@ -71,18 +76,30 @@ section {
 	padding: 1rem 0;
 }
 
+#mainNav {
+	/*background-color: #efefef!important;	*/
+	/*background-color: rgb(0,125,187)!important;*/
+	background-color: white!important;
+}
+.logo-parent {
+	margin: auto;
+}
+
 #page-footer {
     position:absolute;
 	bottom:0;
 	width:100%;
 	height:60px;
-    background-color: #2c3e50!important;
-    color: white;
+    background-color: #efefef!important;
+    color: black;
     text-align: center;
 }
 
 #header {
    //padding:10px;
+   border-bottom-color: rgb(0,125,187)!important;
+   border-bottom-style: solid;
+   border-bottom-width: thin;
 }
 #page-body {
    padding:10px;
