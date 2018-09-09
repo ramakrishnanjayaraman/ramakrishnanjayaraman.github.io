@@ -72,8 +72,8 @@ and (orientation : portrait) {
 }
 
 .no-bottom-pad {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
 }
 
 .more-pad {
