@@ -5,11 +5,11 @@ html {
   box-sizing: inherit;
 }
 .scratchpad{
-  min-height: 650px;
+  min-height: 500px;
   max-width: 500px;
   max-height: 650px;
   /*border: solid 10px #FFFFFF;*/
-  margin:0 auto;
+  margin:10px auto;
 }
 body {
     background:#efefef;
@@ -21,10 +21,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width:100%;
+  position: fixed;
+  width:80%;
 }
 @media only screen and (max-width : 480px) {
-  .scratchpad {width:90% !important;height:396px;}
+  .scratchpad {min-height: 350px; width:90% !important;height:350px!important;}
   .scratch-container {width:100% !important;}
 }
 /*
