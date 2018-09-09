@@ -22,7 +22,7 @@
 .img-fluid {
 	//width: 100%;
 	height: 85px;
-	max-width: 150px;
+	max-width: 135px;
 }
 
 @media only screen 
@@ -74,7 +74,7 @@ and (orientation : portrait) {
 
 .row-adjustment {
 	margin-right: 0px;
-	margin-left: -15px;
+	margin-left: -5px;
 }
 	
 .company-logo {
