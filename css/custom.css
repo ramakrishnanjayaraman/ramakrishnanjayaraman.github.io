@@ -21,7 +21,8 @@
 
 .img-fluid {
 	//width: 100%;
-	height: 150px;
+	height: 85px;
+	max-width: 150px;
 }
 
 .img-fluid-text {
@@ -72,11 +73,13 @@ section {
 #page-body {
    padding:10px;
    padding-bottom:60px;   /* Height of the footer */
+   max-width: 800px;
+   margin: auto;
 }
 
 .portfolio-item {
 	text-align: center;
-	padding-top: 20px;
+	//padding-top: 20px;
 }
 
 .standard-a {
