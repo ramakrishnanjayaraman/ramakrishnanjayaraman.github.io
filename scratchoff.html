@@ -99,6 +99,8 @@
 	  }
 */	  
 
+	var audio = new Audio('sounds/rubbing.mp3');
+	
 	$('#Scratchoff-Main').text(decodeURI(txt1));
 	$('#Scratchoff-Sub').text(decodeURI(txt2));
 	$('#promo').wScratchPad({
@@ -115,8 +117,7 @@
 		
 		scratchMove: function (e, percent) {
 			if (percent < 90){
-				//var audio = new Audio('sounds/scratch.mp3');
-				//audio.play();
+				audio.play();
 			}
 			// Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
 			if ((percent > 50) && (promoCode != '')) {
