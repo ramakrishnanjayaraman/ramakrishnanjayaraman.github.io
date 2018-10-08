@@ -50,11 +50,49 @@
 		   <section class="" id="selection-section">
 				<div class="container">
 					<h5 class="text-center text-secondary mb-0">Benefits of VIP Club:</h5>
+					<div class="row row-adjustment">
+						<div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+							  <img class="img-fluid" src="img/birthdaycake.png" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Free Birthday Gifts</h6></div>
+							</a>
+						</div>
+						<div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+							  <img class="img-fluid" src="img/anniversary.jpeg" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Free Vehicle Anniversary Gifts</h6></div>
+							</a>
+						</div>
+						<div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+							  <img class="img-fluid" src="img/additional-benefits.jpeg" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Additional Free Benefits</h6></div>
+							</a>
+						 </div>
+						 <div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+							  <img class="img-fluid" src="img/text-notifications.jpeg" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Specific Vehicle Notifications</h6></div>
+							</a>
+						 </div>
+						 <div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+							  <img class="img-fluid" src="img/service-discounts.jpeg" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Service Discounts</h6></div>
+							</a>
+						 </div>
+						 <div class="col-4 adjust-pad-left mt-4">
+							<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+							  <img class="img-fluid" src="img/incentives.jpeg" alt="">
+							  <div class="img-fluid-text mt-2"><h6>Sales Incentives</h6></div>
+							</a>
+						 </div>
+					</div>
 				</div>
 			</section>
 		</div>
 		<div id="page-footer">
-		  <small>Copyright &copy; 2018</small>
+		  <small id="CopyrightText">Copyright &copy; 2018</small>
 		</div>
 	</div>
 	
@@ -81,28 +119,31 @@
 			var tenantLogo = getUrlParam('tenantlogo','');
 			$('#companylogo').attr("src", tenantLogo);
 			
+			$('#CopyrightText').html("Copyright &copy; 2018 - " + decodeURI(tenantName) + " All Rights Reserved");
+			
 			var iframe = $('#video-container iframe');
 			
 			var player = new Vimeo.Player(iframe);
 
 			player.on('ended', function() {
 				console.log('Finished.');
-				
+			/*	
 				$("#video-section").fadeOut(1000, function() {
 					showSelectionSection();
 				});
 				
 				player.unload();
+			*/	
 				exitFullScreen();
 			});
-
+/*
 			$('#play-video-again').click(function(){ 
 				$("#video-section").show();
 				hideSelectionSection();
 				player.play();
 				return false; 
 			});
-			
+*/			
 			player.play();
 		});
 		
