@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome To VIP Club!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+	<div id="full-page">
+		<div id="header">
+			<!-- Navigation -->
+			<nav class="navbar navbar-expand-lg bg-secondary text-uppercase no-bottom-pad" id="mainNav">
+			  <div class="container">
+				<a class="navbar-brand js-scroll-trigger logo-parent" href="#page-top"><img class="company-logo" src="img/portfolio/logo.png" alt="" id="companylogo"></a>
+				</div>
+			</nav>
+		</div>
+		<div id="page-body">
+			<section class="" id="page-heading">
+				<h4 class="text-center text-uppercase text-secondary mb-0" id="CongratsMessage">Congratulations</h4>				
+			</section>
+			<section class="" id="video-section">
+				 <div class='embed-container' id="video-container">
+					<iframe id="videoframe" allow="autoplay; fullscreen" src="https://player.vimeo.com/video/293647393?autoplay=1&playsinline=0" style="width:100%;height=100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allowautoplay></iframe>
+				</div>
+				<script src="https://player.vimeo.com/api/player.js"></script>
+		   </section>
+		   <section class="" id="selection-section">
+				<div class="container">
+					<h5 class="text-center text-secondary mb-0">Benefits of VIP Club:</h5>
+				</div>
+			</section>
+		</div>
+		<div id="page-footer">
+		  <small>Copyright &copy; 2018</small>
+		</div>
+	</div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			var tenantName = getUrlParam('tenant','Ignite Dealer Services');
+			$('#CongratsMessage').text("Congratulations on becoming a Member of the " + decodeURI(tenantName) + " VIP Club!");
+			
+			var tenantLogo = getUrlParam('tenantlogo','');
+			$('#companylogo').attr("src", tenantLogo);
+			
+			var iframe = $('#video-container iframe');
+			
+			var player = new Vimeo.Player(iframe);
+
+			player.on('ended', function() {
+				console.log('Finished.');
+				
+				$("#video-section").fadeOut(1000, function() {
+					showSelectionSection();
+				});
+				
+				player.unload();
+				exitFullScreen();
+			});
+
+			$('#play-video-again').click(function(){ 
+				$("#video-section").show();
+				hideSelectionSection();
+				player.play();
+				return false; 
+			});
+			
+			player.play();
+		});
+		
+		function showSelectionSection() {
+			$("#selection-section").slideToggle();
+			$("#play-video-again").show();
+		}
+		
+		function hideSelectionSection() {
+			$("#selection-section").hide();
+			$("#play-video-again").hide();
+		}
+		
+		function exitFullScreen() {
+		  if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement ) {
+			if (document.exitFullscreen) {
+			  document.exitFullscreen();
+			} else if (document.msExitFullscreen) {
+			  document.msExitFullscreen();
+			} else if (document.mozCancelFullScreen) {
+			  document.mozCancelFullScreen();
+			} else if (document.webkitExitFullscreen) {
+			  document.webkitExitFullscreen();
+			}
+		  }
+		}
+		
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+		}
+		
+		function getUrlParam(parameter, defaultvalue){
+			var urlparameter = defaultvalue;
+			if(window.location.href.indexOf(parameter) > -1){
+				urlparameter = getUrlVars()[parameter];
+				}
+			return urlparameter;
+		}
+	</script>
+  </body>
+
+</html>
